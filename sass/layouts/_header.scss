@@ -1,0 +1,53 @@
+.header {
+    display: flex;
+    background-color: white;
+    flex-flow: column wrap;
+
+
+    &__logo {
+        font-family: "Shrikhand";
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+        box-shadow: 0px 3px 3px #b7b7b7;
+
+        h1 {}
+    }
+
+    &__location {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: baseline;
+        background-color: $bg-color-location;
+        color: $text-color-location;
+        padding: 20px 0px;
+
+        i {
+            margin-right: 16px;
+        }
+
+        .header__location__city {}
+    }
+
+    &__jumbotron {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: $bg-color-jumbotron;
+        text-align: center;
+        padding-bottom: 30px;
+
+        &__heading {
+            padding: 0 50px;
+        }
+
+        &__text {
+            color: $text-color-jumbotron;
+            padding: 0 20px;
+
+        }
+    }
+}

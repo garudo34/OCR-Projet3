@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&family=Shrikhand&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  margin: 0px auto;
+  max-width: 1440px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: #000000;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #000000;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 700;
+}
+
+p {
+  font-weight: 400;
+}
+
+button {
+  cursor: pointer;
+}
+
+.btn {
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  border: 3px solid transparent;
+  padding: 0.55rem 1rem;
+}
+.btn--rounded {
+  border-radius: 1.5rem;
+}
+.btn--primary {
+  color: white;
+  background: linear-gradient(to bottom right, #FF79DA 0%, #9356DC 100%);
+  background-origin: border-box;
+}
+
+.header {
+  display: flex;
+  background-color: white;
+  flex-flow: column wrap;
+}
+.header__logo {
+  font-family: "Shrikhand";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  box-shadow: 0px 3px 3px #b7b7b7;
+}
+.header__location {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: baseline;
+  background-color: #e5e5e5;
+  color: #272727;
+  padding: 20px 0px;
+}
+.header__location i {
+  margin-right: 16px;
+}
+.header__jumbotron {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f5f5;
+  text-align: center;
+  padding-bottom: 30px;
+}
+.header__jumbotron__heading {
+  padding: 0 50px;
+}
+.header__jumbotron__text {
+  color: #6b6b6b;
+  padding: 0 20px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 10px 20px;
+}
+main .operation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main .operation__list {
+  margin: 10px 0px;
+}
+main .operation__list__item {
+  padding: 10px 10px;
+}
+
+form {
+  width: 100%;
+  margin: 20px 0;
+}
+
+/*# sourceMappingURL=style.css.map */
