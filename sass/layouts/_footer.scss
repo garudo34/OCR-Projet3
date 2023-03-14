@@ -1,0 +1,26 @@
+.footer {
+
+    padding: 5px 20px 50px 20px;
+    color: white;
+    background-color: rgb(40, 40, 40);
+
+    h2 {
+        font-family: "Shrikhand";
+    }
+
+    ul li {
+        margin-top: 15px;
+        .footer__link {
+            color: white;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            i {
+                width: 35px;
+            }
+        }
+        
+    }
+
+
+}

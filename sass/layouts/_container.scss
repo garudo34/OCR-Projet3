@@ -3,22 +3,135 @@ main {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    padding: 10px 20px;
+    gap: 50px;
+
 
     .operation {
+        padding: 30px 20px;
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        justify-content: flex-start;
+        align-items: flex-start;
+        text-align: center;
+        width: 100%;
+
+
 
         &__list {
             margin: 10px 0px;
+            padding: 0px 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+            width: 100%;
+
 
             &__item {
-                padding: 10px 10px;
+                width: 100%;
+                background-color: $bg-color-list-item;
+                color: $text-color-list-item;
+                font-size: 18px;
+                border-radius: 1rem;
+                padding: 1.5rem 1rem;
+                box-shadow: $box-shadow-color-list-item 0px 2px 8px 1px;
+                position: relative;
+
+                &::before {
+                    content: "1";
+                    font-size: 14px;
+                    color: white;
+                    background-color: $color-primary;
+                    border-radius: 1rem;
+                    padding: 5px 10px;
+                    position: absolute;
+                    left: -15px;
+                    top: 20px;
+                }
+
+                &:hover {
+                    background-color: $bg-color-list-item-active;
+
+                    i {
+                        color: $color-primary;
+                    }
+
+                }
+
+                i {
+                    margin-right: 1rem;
+                    font-size: 22px;
+                    color: $text-color-jumbotron;
+
+
+
+                }
+
             }
         }
     }
 
+    .restaurant {
+        background-color: $bg-color-list-item;
+        padding: 30px 20px 70px 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 10px;
+        text-align: left;
 
+        .container-restaurant {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            gap: 20px;
+
+            .card {
+                background-color: white;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+                display: flex;
+                flex-direction: column;
+                height: 250px;
+
+                &--rounded {
+                    border-radius: 1rem;
+                }
+
+                .card__img {
+                    width: 100%;
+                    border-radius: 1rem 1rem 0 0;
+                    object-fit: cover;
+                    overflow: hidden;
+                }
+
+                .card__content {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 5px 30px 5px 20px;
+                    text-align: left;
+
+                    &__text {
+                        h3 {
+                            margin: 8px 0px 3px 0px;
+                        }
+
+                        p {
+                            margin: 3px 0px 8px 0px;
+                            color: $text-color-jumbotron;
+                        }
+                    }
+
+                    &__like {
+                        font-size: 22px;
+                        color: $text-color-jumbotron;
+                    }
+                }
+            }
+        }
+
+    }
 }
