@@ -1,0 +1,112 @@
+.menu {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    &__img {
+        height: 250px;
+        z-index: -1;
+
+        .thumbnail {
+            object-fit: cover;
+            width: 100%;
+        }
+    }
+
+    &__title {
+        font-family: "Shrikhand";
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        background-color: $bg-color-list-item;
+        padding: 30px 20px 5px;
+        border-radius: 30px 30px 0 0;
+        margin-top: -40px;
+
+        h2 {
+            margin: 0;
+        }
+
+        &__like {
+            font-size: 22px;
+            margin-right: 10px;
+            color: $text-color-jumbotron;
+
+        }
+    }
+}
+
+.menu_liste {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: $bg-color-list-item;
+    padding: 0px 12px;
+
+    &__categories {
+        display: flex;
+        flex-flow: column wrap;
+        margin: 10px 0;
+
+        &_label {
+            position: relative;
+            margin-left: 5px;
+            color: $text-color-jumbotron;
+
+            &::after {
+                position: absolute;
+                background-color: $color-tertiary;
+                width: 40px;
+                height: 3px;
+                top: 25px;
+                left: 1px;
+                content: "";
+            }
+        }
+    }
+}
+
+
+.card_plat {
+    // display: flex;
+    // flex-direction: row;
+    background-color: white;
+    border-radius: 15px;
+    margin: 10px 0;
+    padding: 10px;
+    box-shadow: 1px 1px 2px #b7b7b7, -1px 1px 2px #b7b7b7;
+
+    &__name {
+        margin: 5px 0px 5px 5px;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    &__infos {
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+        justify-content: space-between;
+
+        &__descr {
+            margin: 5px 0px 5px 5px;
+            font-size: 14px;
+            color: $text-color-jumbotron;
+        }
+
+        &__prix {
+            font-size: 14px;
+            font-weight: bold;
+            padding-right: 10px;
+        }
+    }
+
+}
+
+form#commander {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 25px 0 35px 0;
+    background-color: $bg-color-list-item;
+}

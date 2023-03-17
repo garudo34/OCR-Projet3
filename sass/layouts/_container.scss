@@ -1,13 +1,6 @@
 main {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 50px;
-
-
     .operation {
-        padding: 20px 20px;
+        padding: 20px 20px 70px 20px;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -81,73 +74,6 @@ main {
             flex-flow: row wrap;
             justify-content: center;
             gap: 20px;
-
-            .card {
-                background-color: white;
-                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-                display: flex;
-                flex-direction: column;
-                height: 250px;
-                position: relative;
-
-                &--rounded {
-                    border-radius: 1rem;
-                }
-
-                .card__new {
-                    position: absolute;
-                    right: 10px;
-                    top: 15px;
-                    padding: 4px 5px;
-                    font-size: 14px;
-                    border-radius: 2px;
-                    background-color: rgb(137, 221, 197);
-                    color: rgb(31, 140, 106);
-                }
-
-                .card__img {
-                    width: 100%;
-                    border-radius: 1rem 1rem 0 0;
-                    object-fit: cover;
-                    overflow: hidden;
-                }
-
-                .card__content {
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: space-between;
-                    align-items: center;
-                    padding: 5px 30px 5px 20px;
-                    text-align: left;
-
-                    &__text {
-                        h3 {
-                            margin: 8px 0px 3px 0px;
-                        }
-
-                        p {
-                            margin: 3px 0px 8px 0px;
-                            color: $text-color-jumbotron;
-                        }
-                    }
-
-                    &__like {
-                        i {
-                            font-size: 22px;
-                            font-weight: normal;
-                            color: $text-color-jumbotron;
-
-                            &:hover {
-                                font-weight: bold;
-                                background: linear-gradient(to bottom right, $color-secondary 0%, $color-primary 100%);
-                                background-clip: text;
-                                color: transparent;
-                            }
-                        }
-
-                    }
-                }
-            }
         }
     }
 }
