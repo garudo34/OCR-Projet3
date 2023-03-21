@@ -42,22 +42,54 @@ button {
 }
 
 .btn {
+  box-sizing: border-box;
   display: inline-block;
   font-weight: 400;
   text-align: center;
   white-space: nowrap;
   vertical-align: middle;
-  border: 3px solid transparent;
-  padding: 0.55rem 1rem;
+  border-style: none;
+  padding: 0.75rem 1.2rem;
   width: 50%;
+  z-index: 1;
+  position: relative;
+}
+.btn:hover::after {
+  opacity: 1;
+  box-shadow: 0px 15px 20px rgb(215, 215, 215);
+}
+.btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 250ms;
 }
 .btn--rounded {
+  border-radius: 1.5rem;
+}
+.btn--rounded:hover {
+  border-radius: 1.5rem;
+}
+.btn--rounded:hover::after {
+  border-radius: 1.5rem;
+}
+.btn--rounded::after {
   border-radius: 1.5rem;
 }
 .btn--primary {
   color: white;
   background: linear-gradient(to bottom right, #FF79DA 0%, #9356DC 100%);
   background-origin: border-box;
+  border-style: none;
+}
+.btn--primary::after {
+  background: linear-gradient(to bottom right, #ff93e1 0%, #ae80e5 100%);
+  border-style: none;
 }
 
 .card {
