@@ -134,16 +134,35 @@ button {
   margin: 3px 0px 8px 0px;
   color: #6b6b6b;
 }
+.card .card__content__like {
+  margin-right: 10px;
+  font-size: 20px;
+  position: relative;
+}
 .card .card__content__like i {
-  font-size: 22px;
-  font-weight: normal;
+  position: absolute;
+  bottom: 0;
+  left: -25px;
+  right: 0;
+  cursor: pointer;
+}
+.card .card__content__like .empty {
+  opacity: 1;
+  transition: opacity 1s ease;
   color: #6b6b6b;
 }
-.card .card__content__like i:hover {
-  font-weight: bold;
+.card .card__content__like .empty:hover {
+  opacity: 0;
+}
+.card .card__content__like .full {
+  opacity: 0;
+  transition: opacity 1s ease;
   background: linear-gradient(to bottom right, #FF79DA 0%, #9356DC 100%);
   background-clip: text;
-  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+.card .card__content__like .full:hover {
+  opacity: 1;
 }
 
 .header {
@@ -317,9 +336,34 @@ form {
   margin: 0;
 }
 .menu__title__like {
-  font-size: 22px;
   margin-right: 10px;
+  font-size: 20px;
+  position: relative;
+}
+.menu__title__like i {
+  position: absolute;
+  bottom: 0;
+  left: -25px;
+  right: 0;
+  cursor: pointer;
+}
+.menu__title__like .empty {
+  opacity: 1;
+  transition: opacity 1s ease;
   color: #6b6b6b;
+}
+.menu__title__like .empty:hover {
+  opacity: 0;
+}
+.menu__title__like .full {
+  opacity: 0;
+  transition: opacity 1s ease;
+  background: linear-gradient(to bottom right, #FF79DA 0%, #9356DC 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.menu__title__like .full:hover {
+  opacity: 1;
 }
 
 .menu_liste {
@@ -350,6 +394,8 @@ form {
 }
 
 .card_plat {
+  display: flex;
+  flex-direction: column;
   background-color: white;
   border-radius: 15px;
   margin: 10px 0;

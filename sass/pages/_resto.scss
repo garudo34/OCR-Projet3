@@ -28,10 +28,39 @@
         }
 
         &__like {
-            font-size: 22px;
             margin-right: 10px;
-            color: $text-color-jumbotron;
+            font-size: 20px;
+            position: relative;
 
+            & i {
+                position: absolute;
+                bottom: 0;
+                left: -25px;
+                right: 0;
+                cursor: pointer;
+            }
+
+            .empty {
+                opacity: 1;
+                transition: opacity 1s ease;
+                color: $text-color-jumbotron;
+
+                &:hover {
+                    opacity: 0;
+                }
+            }
+
+            .full {
+                opacity: 0;
+                transition: opacity 1s ease;
+                background: linear-gradient(to bottom right, $color-secondary 0%, $color-primary 100%);
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
         }
     }
 }
@@ -68,8 +97,8 @@
 
 
 .card_plat {
-    // display: flex;
-    // flex-direction: row;
+    display: flex;
+    flex-direction: column;
     background-color: white;
     border-radius: 15px;
     margin: 10px 0;

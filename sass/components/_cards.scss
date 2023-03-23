@@ -48,19 +48,39 @@
         }
 
         &__like {
-            i {
-                font-size: 22px;
-                font-weight: normal;
+            margin-right: 10px;
+            font-size: 20px;
+            position: relative;
+
+            & i {
+                position: absolute;
+                bottom: 0;
+                left: -25px;
+                right: 0;
+                cursor: pointer;
+            }
+
+            .empty {
+                opacity: 1;
+                transition: opacity 1s ease;
                 color: $text-color-jumbotron;
 
                 &:hover {
-                    font-weight: bold;
-                    background: linear-gradient(to bottom right, $color-secondary 0%, $color-primary 100%);
-                    background-clip: text;
-                    color: transparent;
+                    opacity: 0;
                 }
             }
 
+            .full {
+                opacity: 0;
+                transition: opacity 1s ease;
+                background: linear-gradient(to bottom right, $color-secondary 0%, $color-primary 100%);
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
         }
     }
 }
