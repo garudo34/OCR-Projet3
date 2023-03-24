@@ -92,44 +92,87 @@
                 content: "";
             }
         }
+
+        .liste_plats {
+            display: flex;
+            flex-direction: column;
+        }
     }
 }
 
-
 .card_plat {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     background-color: white;
     border-radius: 15px;
     margin: 10px 0;
-    padding: 10px;
     box-shadow: 1px 1px 2px #b7b7b7, -1px 1px 2px #b7b7b7;
 
-    &__name {
-        margin: 5px 0px 5px 5px;
-        font-size: 16px;
-        font-weight: bold;
-    }
+    &__description {
+        flex: 11;
+        padding: 10px;
 
-    &__infos {
-        display: flex;
-        flex-direction: row;
-        align-items: baseline;
-        justify-content: space-between;
-
-        &__descr {
+        &__name {
             margin: 5px 0px 5px 5px;
-            font-size: 14px;
-            color: $text-color-jumbotron;
+            font-size: 16px;
+            font-weight: bold;
         }
 
-        &__prix {
-            font-size: 14px;
-            font-weight: bold;
-            padding-right: 10px;
+        &__infos {
+            display: flex;
+            flex-direction: row;
+            align-items: baseline;
+            justify-content: space-between;
+
+            &__descr {
+                margin: 5px 0px 5px 5px;
+                font-size: 14px;
+                color: $text-color-jumbotron;
+            }
+
+            &__prix {
+                font-size: 14px;
+                font-weight: bold;
+                padding-right: 10px;
+            }
         }
     }
 
+    &__volet_validation {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        visibility: hidden;
+        max-width: 0px;
+        opacity: 0;
+        background: $color-tertiary;
+        border-radius: 0px 15px 15px 0px;
+        padding: 5px;
+        transition: all 400ms ease-in-out;
+
+        i {
+            transform: rotate(90deg);
+            font-size: 26px;
+            color: white;
+        }
+    }
+
+    &:active,
+    &:hover {
+        .card_plat__volet_validation {
+            visibility: visible;
+            flex: 2;
+            height: auto;
+            width: auto;
+            opacity: 1;
+            max-width: 20%;
+
+            >i {
+                transform: rotate(360deg);
+                transition: transform 800ms 200ms;
+            }
+        }
+    }
 }
 
 form#commander {
