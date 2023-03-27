@@ -1,0 +1,92 @@
+@mixin mobile-responsive {
+    @media screen and (max-width: map-get($breakpoints, mobile)) {
+        @content;
+    }
+}
+
+@mixin tablette-responsive {
+    @media screen and (min-width: map-get($breakpoints, mobile)) and (max-width: map-get($breakpoints, tablette)) {
+        @content;
+    }
+}
+
+@mixin desktop-responsive {
+    @media screen and (min-width: map-get($breakpoints, desktop)) {
+        @content;
+    }
+}
+
+
+@mixin smooth-toggle {
+    @for $i from 1 through 10 {
+        &.toggle-#{$i} {
+            animation: display-card .5s #{$i * .25}s ease normal both;
+        }
+    }
+}
+
+@keyframes display-card {
+    0% {
+        transform: translateY(10%);
+        opacity: 0;
+        animation-timing-function: ease-in-out;
+    }
+
+    80% {
+        transform: translateY(-15%);
+        animation-timing-function: ease-in-out;
+    }
+
+    100% {
+        transform: translateY(-10%);
+        opacity: 1;
+        animation-timing-function: ease-in-out;
+    }
+}
+
+
+@keyframes fade-out {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(360deg) scale(3);
+    }
+
+    100% {
+        transform: rotate(1800deg) scale(1);
+
+    }
+}
+
+@keyframes colorize {
+    0% {
+        color: $color-primary;
+    }
+
+    45% {
+        color: $color-secondary;
+        opacity: 0.8;
+    }
+
+    80% {
+        color: $color-tertiary;
+        opacity: 0.6;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}

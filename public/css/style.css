@@ -1,4 +1,56 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&family=Shrikhand&display=swap");
+@keyframes display-card {
+  0% {
+    transform: translateY(10%);
+    opacity: 0;
+    animation-timing-function: ease-in-out;
+  }
+  80% {
+    transform: translateY(-15%);
+    animation-timing-function: ease-in-out;
+  }
+  100% {
+    transform: translateY(-10%);
+    opacity: 1;
+    animation-timing-function: ease-in-out;
+  }
+}
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(360deg) scale(3);
+  }
+  100% {
+    transform: rotate(1800deg) scale(1);
+  }
+}
+@keyframes colorize {
+  0% {
+    color: #9356DC;
+  }
+  45% {
+    color: #FF79DA;
+    opacity: 0.8;
+  }
+  80% {
+    color: #99E2D0;
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 * {
   box-sizing: border-box;
 }
@@ -254,42 +306,6 @@ main .restaurant .container-restaurant {
   animation: spin 3s ease-out, colorize 3s ease;
 }
 
-@keyframes fade-out {
-  from {
-    opacity: 1;
-  }
-  to {
-    visibility: hidden;
-    opacity: 0;
-  }
-}
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(360deg) scale(3);
-  }
-  100% {
-    transform: rotate(1800deg) scale(1);
-  }
-}
-@keyframes colorize {
-  0% {
-    color: #9356DC;
-  }
-  45% {
-    color: #FF79DA;
-    opacity: 0.8;
-  }
-  80% {
-    color: #99E2D0;
-    opacity: 0.6;
-  }
-  100% {
-    opacity: 0;
-  }
-}
 .header {
   display: flex;
   background-color: white;
@@ -459,6 +475,38 @@ form {
   border-radius: 15px;
   margin: 10px 0;
   box-shadow: 1px 1px 2px #b7b7b7, -1px 1px 2px #b7b7b7;
+  transform: translateY(0%);
+  opacity: 0;
+}
+.card_plat.toggle-1 {
+  animation: display-card 0.5s 0.25s ease normal both;
+}
+.card_plat.toggle-2 {
+  animation: display-card 0.5s 0.5s ease normal both;
+}
+.card_plat.toggle-3 {
+  animation: display-card 0.5s 0.75s ease normal both;
+}
+.card_plat.toggle-4 {
+  animation: display-card 0.5s 1s ease normal both;
+}
+.card_plat.toggle-5 {
+  animation: display-card 0.5s 1.25s ease normal both;
+}
+.card_plat.toggle-6 {
+  animation: display-card 0.5s 1.5s ease normal both;
+}
+.card_plat.toggle-7 {
+  animation: display-card 0.5s 1.75s ease normal both;
+}
+.card_plat.toggle-8 {
+  animation: display-card 0.5s 2s ease normal both;
+}
+.card_plat.toggle-9 {
+  animation: display-card 0.5s 2.25s ease normal both;
+}
+.card_plat.toggle-10 {
+  animation: display-card 0.5s 2.5s ease normal both;
 }
 .card_plat__description {
   flex: 11;

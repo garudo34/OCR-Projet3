@@ -70,7 +70,7 @@
     flex-direction: column;
     justify-content: space-around;
     background-color: $bg-color-list-item;
-    padding: 0px 12px;
+    padding: 0px 12px;    
 
     &__categories {
         display: flex;
@@ -107,7 +107,10 @@
     border-radius: 15px;
     margin: 10px 0;
     box-shadow: 1px 1px 2px #b7b7b7, -1px 1px 2px #b7b7b7;
-    
+    transform: translateY(0%);
+    opacity: 0;
+    @include smooth-toggle;
+
     &__description {
         flex: 11;
         padding: 10px;
