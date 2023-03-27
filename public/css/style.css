@@ -165,75 +165,6 @@ button {
   opacity: 1;
 }
 
-.header {
-  display: flex;
-  background-color: white;
-  flex-flow: column wrap;
-  position: relative;
-}
-.header__logo {
-  font-family: "Shrikhand";
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1;
-  box-shadow: 1px 1px 2px #b7b7b7, -1px 1px 2px #b7b7b7;
-}
-.header__logo a#back_arrow_accueil {
-  position: absolute;
-  left: 20px;
-  top: auto;
-}
-.header__location {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: baseline;
-  background-color: #e5e5e5;
-  color: #272727;
-  padding: 20px 0px;
-}
-.header__location i {
-  margin-right: 16px;
-}
-.header__jumbotron {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: #f5f5f5;
-  text-align: center;
-  padding-bottom: 30px;
-}
-.header__jumbotron__heading {
-  padding: 0 50px;
-}
-.header__jumbotron__text {
-  color: #6b6b6b;
-  padding: 0 20px;
-}
-
-.footer {
-  padding: 5px 20px 50px 20px;
-  color: white;
-  background-color: rgb(40, 40, 40);
-}
-.footer h2 {
-  font-family: "Shrikhand";
-}
-.footer ul li {
-  margin-top: 15px;
-}
-.footer ul li .footer__link {
-  color: white;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-}
-.footer ul li .footer__link i {
-  width: 35px;
-}
-
 main .operation {
   padding: 20px 20px 70px 20px;
   display: flex;
@@ -302,6 +233,130 @@ main .restaurant .container-restaurant {
   flex-flow: row wrap;
   justify-content: center;
   gap: 20px;
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: #99E2D0;
+  z-index: 999;
+  animation: fade-out 1s linear 2s 1 normal forwards;
+}
+.loader__spinner {
+  position: relative;
+  color: #99E2D0;
+  font-size: 50px;
+  z-index: 1000;
+  animation: spin 3s ease-out, colorize 3s ease;
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(360deg) scale(3);
+  }
+  100% {
+    transform: rotate(1800deg) scale(1);
+  }
+}
+@keyframes colorize {
+  0% {
+    color: #9356DC;
+  }
+  45% {
+    color: #FF79DA;
+    opacity: 0.8;
+  }
+  80% {
+    color: #99E2D0;
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.header {
+  display: flex;
+  background-color: white;
+  flex-flow: column wrap;
+  position: relative;
+}
+.header__logo {
+  font-family: "Shrikhand";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  box-shadow: 1px 1px 2px #b7b7b7, -1px 1px 2px #b7b7b7;
+}
+.header__logo a#back_arrow_accueil {
+  position: absolute;
+  left: 20px;
+  top: auto;
+}
+.header__location {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: baseline;
+  background-color: #e5e5e5;
+  color: #272727;
+  padding: 20px 0px;
+}
+.header__location i {
+  margin-right: 16px;
+}
+.header__jumbotron {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f5f5;
+  text-align: center;
+  padding-bottom: 30px;
+}
+.header__jumbotron__heading {
+  padding: 0 50px;
+}
+.header__jumbotron__text {
+  color: #6b6b6b;
+  padding: 0 20px;
+}
+
+.footer {
+  padding: 5px 20px 50px 20px;
+  color: white;
+  background-color: rgb(40, 40, 40);
+}
+.footer h2 {
+  font-family: "Shrikhand";
+}
+.footer ul li {
+  margin-top: 15px;
+}
+.footer ul li .footer__link {
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.footer ul li .footer__link i {
+  width: 35px;
 }
 
 form {

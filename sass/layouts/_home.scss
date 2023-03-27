@@ -77,3 +77,69 @@ main {
         }
     }
 }
+
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: $color-tertiary;
+    z-index: 999;
+    animation: fade-out 1s linear 2s 1 normal forwards;
+
+    &__spinner {
+        position: relative;
+        color: $color-tertiary;
+        font-size: 50px;
+        z-index: 1000;
+        animation: spin 3s ease-out, colorize 3s ease;
+    }
+}
+
+@keyframes fade-out {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(360deg) scale(3);
+    }
+
+    100% {
+        transform: rotate(1800deg) scale(1);
+
+    }
+}
+
+@keyframes colorize {
+    0% {
+        color: $color-primary;
+    }
+
+    45% {
+        color: $color-secondary;
+        opacity: 0.8;
+    }
+
+    80% {
+        color: $color-tertiary;
+        opacity: 0.6;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
