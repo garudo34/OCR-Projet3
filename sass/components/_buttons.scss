@@ -52,7 +52,7 @@ button {
     }
 
     &--primary {
-        color: $white;
+        color: $white !important;
         background: $color-gradient;
         background-origin: border-box;
         border-style: none;
