@@ -8,6 +8,18 @@ main {
         text-align: center;
         width: 100%;
 
+        @include desktop-responsive {
+            gap: 55px;
+        }
+
+        h2 {
+            @include desktop-responsive {
+                display: flex;
+                flex-direction: row;
+                margin: auto;
+            }
+        }
+
         &__list {
             margin: 10px 0px;
             padding: 0px 10px;
@@ -19,21 +31,26 @@ main {
             width: 100%;
             counter-reset: liste;
 
+            @include desktop-responsive {
+                flex-direction: row;
+                justify-content: space-around;
+            }
+
             &__item {
                 width: 100%;
-                background-color: $bg-color-list-item;
-                color: $text-color-list-item;
+                background-color: $color-background-list-item;
+                color: $color-text-list-item;
                 font-size: 18px;
                 border-radius: 1rem;
                 padding: 1.5rem 1rem;
-                box-shadow: $box-shadow-color-list-item 0px 2px 8px 1px;
+                box-shadow: $color-box-shadow-list-item 0px 2px 8px 1px;
                 position: relative;
                 counter-increment: liste;
 
                 &::before {
                     content: counter(liste);
                     font-size: 14px;
-                    color: white;
+                    color: $white;
                     background-color: $color-primary;
                     border-radius: 1rem;
                     padding: 5px 10px;
@@ -43,7 +60,7 @@ main {
                 }
 
                 &:hover {
-                    background-color: $bg-color-list-item-active;
+                    background-color: $color-background-list-item-active;
 
                     i {
                         color: $color-primary;
@@ -53,14 +70,14 @@ main {
                 i {
                     margin-right: 1rem;
                     font-size: 22px;
-                    color: $text-color-jumbotron;
+                    color: $color-text-jumbotron;
                 }
             }
         }
     }
 
     .restaurant {
-        background-color: $bg-color-list-item;
+        background-color: $color-background-list-item;
         padding: 20px 20px 70px 20px;
         display: flex;
         flex-direction: column;
@@ -69,11 +86,33 @@ main {
         gap: 10px;
         text-align: left;
 
+        @include desktop-responsive {
+            gap: 55px;
+        }
+
+        h2 {
+            @include desktop-responsive {
+                display: flex;
+                flex-direction: row;
+                margin: auto;
+            }
+        }
+
         .container-restaurant {
             display: flex;
             flex-flow: row wrap;
             justify-content: center;
             gap: 20px;
+
+            @include desktop-responsive {
+                flex-flow: row wrap;
+                justify-content: flex-start;
+            }
+
+            @include tablette-responsive {
+                flex-flow: row wrap;
+                justify-content: space-evenly;
+            }
         }
     }
 }

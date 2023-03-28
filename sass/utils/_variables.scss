@@ -2,17 +2,33 @@ $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
 
-$bg-color-location: #e5e5e5;
-$text-color-location: #272727;
-$bg-color-jumbotron: #f5f5f5;
-$text-color-jumbotron: #6b6b6b;
+$color-gradient: linear-gradient(to bottom right, $color-secondary 0%, $color-primary 100%);
+$color-overlay: linear-gradient(to bottom right, $color-tertiary 0%, $color-primary 100%);
 
-$bg-color-list-item: #f5f5f5;
-$text-color-list-item: #272727;
-$box-shadow-color-list-item: #b7b7b7;
-$bg-color-list-item-active: #f2e7fe;
+$white: white;
+$black: black;
 
-$color-overlay: linear-gradient(to bottom right, #99E2D0 0%, #9356DC 100%);
+$darkest-grey: #272727;
+$dark-grey: #6b6b6b;
+$middle-dark-grey: #b7b7b7;
+$middle-grey: #e5e5e5;
+$middle-grey-2: #f5f5f5;
+$grey-pink: #f2e7fe;
+$greenlight:#89D3C5;
+$greendark:#1F8C6A;
+
+$color-background-location: $middle-grey;
+$color-text-location: $darkest-grey;
+$color-background-jumbotron: $middle-grey-2;
+$color-text-jumbotron: $dark-grey;
+$color-text-card: $dark-grey;
+
+$color-background-list-item: $middle-grey-2;
+$color-background-list-item-active: $grey-pink;
+$color-text-list-item: $darkest-grey;
+$color-box-shadow-list-item: $middle-dark-grey;
 
 
-$breakpoints: (mobile: 768px, tablette: 992px, desktop: 1024px);
+
+
+$breakpoints: (mobile: 768px, tablette: 992px, desktop: 1200px);

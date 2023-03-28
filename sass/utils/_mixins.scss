@@ -5,7 +5,7 @@
 }
 
 @mixin tablette-responsive {
-    @media screen and (min-width: map-get($breakpoints, mobile)) and (max-width: map-get($breakpoints, tablette)) {
+    @media screen and (min-width: map-get($breakpoints, mobile)) and (max-width: map-get($breakpoints, desktop)) {
         @content;
     }
 }

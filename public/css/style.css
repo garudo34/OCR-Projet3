@@ -70,12 +70,12 @@ ul {
 }
 
 a {
-  color: #000000;
+  color: black;
   text-decoration: none;
 }
 
 a:visited {
-  color: #000000;
+  color: black;
   text-decoration: none;
 }
 
@@ -94,6 +94,7 @@ button {
 }
 
 .btn {
+  cursor: pointer;
   box-sizing: border-box;
   display: inline-block;
   font-weight: 400;
@@ -108,7 +109,7 @@ button {
 }
 .btn:hover::after {
   opacity: 1;
-  box-shadow: 0px 15px 20px rgb(215, 215, 215);
+  box-shadow: 0px 15px 20px white;
 }
 .btn::after {
   content: "";
@@ -143,6 +144,9 @@ button {
   background: linear-gradient(to bottom right, #ff93e1 0%, #ae80e5 100%);
   border-style: none;
 }
+.btn--lg {
+  width: 100%;
+}
 
 .card {
   background-color: white;
@@ -151,6 +155,18 @@ button {
   flex-direction: column;
   height: 250px;
   position: relative;
+}
+@media screen and (min-width: 1200px) {
+  .card {
+    min-width: 300px;
+    max-width: 450px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .card {
+    min-width: 250px;
+    max-width: 450px;
+  }
 }
 .card--rounded {
   border-radius: 1rem;
@@ -162,8 +178,8 @@ button {
   padding: 4px 5px;
   font-size: 14px;
   border-radius: 2px;
-  background-color: rgb(137, 221, 197);
-  color: rgb(31, 140, 106);
+  background-color: #89D3C5;
+  color: #1F8C6A;
 }
 .card .card__img {
   width: 100%;
@@ -226,6 +242,18 @@ main .operation {
   text-align: center;
   width: 100%;
 }
+@media screen and (min-width: 1200px) {
+  main .operation {
+    gap: 55px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  main .operation h2 {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+  }
+}
 main .operation__list {
   margin: 10px 0px;
   padding: 0px 10px;
@@ -236,6 +264,12 @@ main .operation__list {
   gap: 30px;
   width: 100%;
   counter-reset: liste;
+}
+@media screen and (min-width: 1200px) {
+  main .operation__list {
+    flex-direction: row;
+    justify-content: space-around;
+  }
 }
 main .operation__list__item {
   width: 100%;
@@ -280,11 +314,35 @@ main .restaurant {
   gap: 10px;
   text-align: left;
 }
+@media screen and (min-width: 1200px) {
+  main .restaurant {
+    gap: 55px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  main .restaurant h2 {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+  }
+}
 main .restaurant .container-restaurant {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   gap: 20px;
+}
+@media screen and (min-width: 1200px) {
+  main .restaurant .container-restaurant {
+    flex-flow: row wrap;
+    justify-content: flex-start;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  main .restaurant .container-restaurant {
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+  }
 }
 
 .loader {
@@ -353,11 +411,24 @@ main .restaurant .container-restaurant {
   color: #6b6b6b;
   padding: 0 20px;
 }
+.header__jumbotron__button {
+  width: 70%;
+}
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .header__jumbotron__button {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header__jumbotron__button {
+    width: 40%;
+  }
+}
 
 .footer {
   padding: 5px 20px 50px 20px;
   color: white;
-  background-color: rgb(40, 40, 40);
+  background-color: #272727;
 }
 .footer h2 {
   font-family: "Shrikhand";
@@ -375,11 +446,6 @@ main .restaurant .container-restaurant {
   width: 35px;
 }
 
-form {
-  width: 100%;
-  padding: 20px 0;
-}
-
 .menu {
   display: flex;
   flex-direction: column;
@@ -388,6 +454,12 @@ form {
 .menu__img {
   height: 250px;
   z-index: -1;
+}
+@media screen and (min-width: 1200px) {
+  .menu__img {
+    height: 700px;
+    margin-top: -200px;
+  }
 }
 .menu__img .thumbnail {
   object-fit: cover;
@@ -467,6 +539,13 @@ form {
   display: flex;
   flex-direction: column;
 }
+@media screen and (min-width: 1200px) {
+  .menu_liste__categories .liste_plats {
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 35px;
+  }
+}
 
 .card_plat {
   display: flex;
@@ -477,6 +556,11 @@ form {
   box-shadow: 1px 1px 2px #b7b7b7, -1px 1px 2px #b7b7b7;
   transform: translateY(0%);
   opacity: 0;
+}
+@media screen and (min-width: 1200px) {
+  .card_plat {
+    width: 25%;
+  }
 }
 .card_plat.toggle-1 {
   animation: display-card 0.5s 0.25s ease normal both;
@@ -511,19 +595,31 @@ form {
 .card_plat__description {
   flex: 11;
   padding: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .card_plat__description__name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   margin: 5px 0px 5px 5px;
   font-size: 16px;
   font-weight: bold;
 }
 .card_plat__description__infos {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   display: flex;
   flex-direction: row;
   align-items: baseline;
   justify-content: space-between;
 }
 .card_plat__description__infos__descr {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   margin: 5px 0px 5px 5px;
   font-size: 14px;
   color: #6b6b6b;
@@ -557,6 +653,11 @@ form {
   width: auto;
   opacity: 1;
   max-width: 20%;
+}
+@media screen and (min-width: 1200px) {
+  .card_plat:active .card_plat__volet_validation, .card_plat:hover .card_plat__volet_validation {
+    max-width: 30%;
+  }
 }
 .card_plat:active .card_plat__volet_validation > i, .card_plat:hover .card_plat__volet_validation > i {
   transform: rotate(360deg);

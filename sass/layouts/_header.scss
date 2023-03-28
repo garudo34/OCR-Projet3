@@ -1,6 +1,6 @@
 .header {
     display: flex;
-    background-color: white;
+    background-color: $white;
     flex-flow: column wrap;
     position: relative;
 
@@ -10,7 +10,7 @@
         justify-content: center;
         align-items: center;
         z-index: 1;
-        box-shadow: 1px 1px 2px #b7b7b7, -1px 1px 2px #b7b7b7;
+        box-shadow: 1px 1px 2px $middle-dark-grey, -1px 1px 2px $middle-dark-grey;
 
         a#back_arrow_accueil {
             position: absolute;
@@ -24,15 +24,13 @@
         flex-direction: row;
         justify-content: center;
         align-items: baseline;
-        background-color: $bg-color-location;
-        color: $text-color-location;
+        background-color: $color-background-location;
+        color: $color-text-location;
         padding: 20px 0px;
 
         i {
             margin-right: 16px;
         }
-
-        .header__location__city {}
     }
 
     &__jumbotron {
@@ -40,7 +38,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background-color: $bg-color-jumbotron;
+        background-color: $color-background-jumbotron;
         text-align: center;
         padding-bottom: 30px;
 
@@ -49,9 +47,21 @@
         }
 
         &__text {
-            color: $text-color-jumbotron;
+            color: $color-text-jumbotron;
             padding: 0 20px;
 
+        }
+
+        &__button {
+            width: 70%;
+
+            @include tablette-responsive {
+                width: 50%;
+            }
+
+            @include desktop-responsive {
+                width: 40%;
+            }
         }
     }
 }
